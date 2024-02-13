@@ -1,0 +1,431 @@
+ /* Reset styles */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header h1{
+    padding-left: 20px;
+}
+
+header img {
+    border: #30BCED 0.1px solid;
+}
+
+header,footer {
+    background: #333;
+    color: #fff;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center; /* Center the items horizontally */
+    align-items: center;
+}
+
+footer p{
+    font-size: 10px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+li {
+    margin: 0 15px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #ffd700; /* Change the color on hover */
+}
+
+
+
+/* Styles for the logo */
+.logo {
+    max-width: 50px; /* Adjust the maximum width as needed */
+    height: auto;
+}
+
+/* Custom styles for the h1 */
+header h1 {
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif; /* Replace with your desired Roman attractive font */
+    font-size: 3em; /* Adjust the size as needed */
+    color: #fff;
+    text-transform: uppercase;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section {
+    width: 100%;
+    padding: 20px;
+    border-bottom: 2px solid #30BCED;
+    border-top: 2px solid #30BCED;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Customize styles for each section as needed */
+#section1 {
+    background: #212738;
+    color: #fff;
+}
+
+#section1 .left-container,
+#section1 .right-container {
+    width: 48%; /* Adjust the width as needed */
+}
+  
+  #section1 img {
+    max-width: 100%;
+    height: auto;
+    order: 2;
+    animation: fallEffect 1s ease-in-out infinite; /* Adjust the duration and timing function as needed */
+}
+
+@keyframes fallEffect {
+0% {
+    transform: translateY(0);
+}
+50% {
+    transform: translateY(2px); /* Adjust the number of pixels for the fall distance */
+}
+100% {
+    transform: translateY(0);
+}
+}
+
+#section1 button {
+    margin-top: 70px; /* Push the button to the bottom */
+    margin-left: 20%;
+    padding: 15px 60px; /* Make the button wider */
+    background-color: #30BCED;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em; /* Increase the font size */
+    order: 3; /* Move the button to the left */
+    border-radius: 10px; /* Make the border smooth */
+    transition: background-color 0.3s; /* Add a smooth transition for color change */
+
+    /* Additional styles for hover effect */
+    &:hover {
+        background-color: #D2D0BA; /* Change color on hover */
+    }
+}
+
+#section1 h2, #section1 p {
+    width: 100%;
+    order: 1; /* Move the heading and paragraph to the top */
+    padding-left: 20%;
+}
+
+/* Custom styles for the h2 tags */
+.left-container h2 {
+    font-family: 'Times New Roman', Times, serif; /* Replace with your desired attractive font */
+    font-size: 7em; /* Adjust the size as needed */
+    font-weight: bold;
+    color: #fff;
+    opacity: 0; /* Initially, set opacity to 0 for the animation effect */
+}
+
+/* Animation for the h2 tags */
+@keyframes fadeInFromLeft {
+    0% {
+        transform: translateX(-100%); /* Start off-screen to the left */
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0); /* Move to the center */
+        opacity: 1;
+    }
+}
+
+/* Apply the animation to each h2 with a delay */
+.left-container h2:nth-child(1) {
+    animation: fadeInFromLeft 1s ease-in-out 0.5s forwards; /* Delay the animation for the first h2 */
+}
+
+.left-container h2:nth-child(2) {
+    animation: fadeInFromLeft 1s ease-in-out 1s forwards; /* Delay the animation for the second h2 */
+}
+
+.left-container h2:nth-child(3) {
+    animation: fadeInFromLeft 1s ease-in-out 1.5s forwards; /* Delay the animation for the third h2 */
+}
+
+
+
+#section2 {
+    background-color: #2A324B;
+    color: white;
+    display: flex;
+    height: auto; /* Set height to auto */
+}
+
+.main-container {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
+
+.image-box {
+    flex: 1;
+    display: flex;
+    align-items: center; /* Align items in the center */
+    justify-content: center; /* Center items horizontally */
+}
+
+.image-box img {
+    width: 40px; 
+    height: auto;
+    border-radius: 10px;
+}
+
+.image-box img:hover {
+    opacity: 0.6;
+}
+
+#section2 a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color from the parent */
+}
+
+
+
+/* Flexbox for the section to arrange containers */
+#section3 {
+    display: flex;
+    flex-wrap: wrap; /* Allow containers to wrap to the next line if space is not enough */
+    justify-content: space-between; /* Add space between containers */
+    background-color: #817E9F;
+    
+}
+
+
+/* Styles for the image containers */
+.image-container {
+    margin-bottom: 20px;
+    width: 50%;
+    box-sizing: border-box; /* Ensure padding and border don't increase the width */
+    padding: 0 10px; /* Optional: Add some spacing between containers */
+    transition: background-image 0.5s ease-in-out;
+}
+
+/* Styles for the images */
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optional: Add border-radius to images */
+}
+
+.image-container:hover img{
+    border:#30BCED 3px double;
+    border-radius: 15px;
+    
+
+}
+/* Styles for the title and paragraph */
+.image-container h3 {
+    margin-top: 10px;
+    font-size: 1.5em;
+    color: #212738;
+    text-align: center;
+}
+
+.image-container p {
+    color: white;
+    padding-top: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+}
+
+
+
+
+
+#section4 {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #212738;
+}
+
+form{
+    width: 100%;
+}
+
+form textarea {
+    max-width: 80%;
+    min-width: 80%;
+    max-height: 400px;
+}
+
+#left-section h2{
+    color: white;
+    font-size: 2em;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+#left-section {
+    width: 50%; /* Make the left section occupy 50% of the width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Container for each form element */
+.form-container {
+    margin-bottom: 10px; /* Adjust the spacing between form elements */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Add some styling to form elements */
+.form-container label,
+.form-container input{
+    width: 80%;
+    padding:20px 0px 20px 10px;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+.form-container textarea {
+    width: 80%;
+    padding:10px 0px 60px 10px;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+.form-container input[type="submit"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    box-sizing: border-box;
+    background-color: #30BCED;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-container input[type="submit"]:hover {
+    background-color: #D2D0BA; /* Change the color on hover */
+}
+
+
+
+#right-section {
+    width: 50%; /* Make the right section occupy 50% of the width */
+}
+
+#right-section p{
+    margin-top: 20px;
+    font-size: 15px;
+    font-family: sans-serif;
+    color: white;
+
+}
+
+#right-section h2 {
+    margin-top: 20px;
+    color: white;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+#right-section img {
+    margin-top:5%;
+    width: 50px;
+    height: auto;
+    border-radius: 15px; /* Optional: Add border-radius to the image */
+    transition: opacity 0.3s;
+}
+
+
+#right-section img:hover {
+    opacity: 0.6; /* Change opacity on hover */
+}
+
+#timetable p{
+    padding-top:5px;
+    font-size:15px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+@media screen and (max-width: 800px) {
+    .left-container h2 {
+        font-family: 'Times New Roman', Times, serif; /* Replace with your desired attractive font */
+        font-size: 4em; /* Adjust the size as needed */
+        font-weight: bold;
+        color: #fff;
+        opacity: 0; /* Initially, set opacity to 0 for the animation effect */
+    }
+
+    #section1 button {
+        margin-top: 70px; /* Push the button to the bottom */
+        margin-left: 20%;
+        padding: 15px 60px; /* Make the button wider */
+        background-color: #30BCED;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        font-size: 0.8em; /* Increase the font size */
+        order: 3; /* Move the button to the left */
+        border-radius: 10px; /* Make the border smooth */
+        transition: background-color 0.3s; /* Add a smooth transition for color change */
+    
+        /* Additional styles for hover effect */
+        &:hover {
+            background-color: #D2D0BA; /* Change color on hover */
+        }
+    }
+
+    .image-container {
+        margin-bottom: 20px;
+        width: 100%;
+        box-sizing: border-box; /* Ensure padding and border don't increase the width */
+        padding: 0 10px; /* Optional: Add some spacing between containers */
+        transition: background-image 0.5s ease-in-out;
+    }
+    
+
+}
